@@ -1,0 +1,237 @@
+remotePath = game:GetService("ReplicatedStorage").Packages.Knit.Services
+getgenv().AutoDiamond = false
+getgenv().AutoClick = false
+getgenv().AutoRebirth = false
+getgenv().AutoEgg = false
+getgenv().OpFarm = false
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Eylax Hub", "Sentinel")
+  
+local Window = Library.CreateLib("Eylax Hub", "GrapeTheme")
+
+
+local Tab = Window:NewTab("Main")
+
+  
+local Section = Tab:NewSection("Farming")
+
+
+Section:NewToggle("Auto Click","Enable Auto Clicking", function(bool)
+  getgenv().AutoClick = bool
+  print('Auto Click is ', bool)
+  if bool then
+      AutoClick()
+     end
+  end)
+
+Section:NewToggle("Auto Rebirth","Auto Rebirth Max", function(bool)
+    getgenv().AutoRebirth = bool
+    print('OP Farm is ', bool)
+    autoRebirth()
+end)
+
+Section:NewToggle("OP Auto Click","OP Insane Clicker", function(bool)
+    getgenv().OpFarm = bool
+    print('OP Farm is ', bool)
+    OPAutoClick()
+end)
+
+
+
+
+local Tab = Window:NewTab("Unlock")
+
+  
+local Section = Tab:NewSection("Unlock/Redeem!")
+
+
+Section:NewButton("Unlock Trade", "Unlock Trade OP", function()
+    print('Trade Unlocked!')
+    unlockTrade()
+end)
+
+Section:NewButton("Redeem Rewards", "Redeem all Rewards", function()
+    print('Redeemed!')
+    redeemRewards()
+end)
+
+Section:NewButton("Equip Best Pets", "Equip Best:)", function()
+    print('Equipped!')
+   equipBest()
+end)
+
+local Tab = Window:NewTab("Other")
+
+
+    local Section = Tab:NewSection("All Teleports")
+    Section:NewDropdown("Teleports", "DropdownInf", {"Grass", "Beach", "Volcano", "Space", "City", "Sea", "Candy", "ToyLand", "Graveyard", "Saint Patrick's", "Ancient Egypt", "Arcade"}, function(selectedArea)
+        teleportWorld(selectedArea)
+    end)
+    
+
+
+
+local Tab = Window:NewTab("Credits")
+
+local Section = Tab:NewSection("Made By Eylac#8809")
+
+
+
+
+
+
+function AutoClick()
+    spawn(
+    function ()
+        while getgenv().AutoClick == true do
+            remotePath.ClickService.RF.Click:InvokeServer()    
+                wait(0.01)
+            end
+        end)
+    end
+    
+
+
+
+function OPAutoClick()
+spawn(
+    function()
+        if getgenv().OpFarm == true then
+            local New_CFrame = game:GetService("Workspace").Resources.Island.Arcade.Part.CFrame
+            local ts = game:GetService('TweenService')
+            local char = game.Players.LocalPlayer.Character
+            local part = char.HumanoidRootPart
+            local ti = TweenInfo.new(1, Enum.EasingStyle.Linear) -- this one is how fast or slow you go
+            local tp = {CFrame = New_CFrame}
+            ts:Create(part,ti,tp):Play()
+            wait()
+    
+    
+        elseif getgenv().OpFarm == false then
+            local New_CFrame = game:GetService("Workspace").Resources.Island.Spawn.Part.CFrame
+            local ts = game:GetService('TweenService')
+            local char = game.Players.LocalPlayer.Character
+            local part = char.HumanoidRootPart
+            local ti = TweenInfo.new(1, Enum.EasingStyle.Linear) -- this one is how fast or slow you go
+            local tp = {CFrame = New_CFrame}
+            ts:Create(part,ti,tp):Play()
+            end
+           
+            while getgenv().OpFarm == true do
+                remotePath.ClickService.RF.Click:InvokeServer()    
+            end
+     end)
+end
+        function autoRebirth()
+            spawn(function()
+                while getgenv().AutoRebirth == true do 
+                local args = {
+                    [1] = 30,
+                }
+
+                game:GetService("ReplicatedStorage").Packages.Knit.Services.RebirthService.RF.Rebirth:InvokeServer(30)
+                            wait()
+                                end
+                            end)
+                        end
+
+     function unlockTrade()
+    spawn(
+        function() 
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6095.72021, -151.309982, 2006.82935, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()  
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()    
+          remotePath.ClickService.RF.Click:InvokeServer()     
+           
+          wait(0.75)
+            
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-30.6796875, 81.6342697, -584.304871, 0.964976668, 0, 0.262335718, 0, 1, 0, -0.262335718, 0, 0.964976668)
+            wait(0.5)
+            local args = {[1] = "Beach",}
+    remotePath.IslandService.RF.PurchaseIsland:InvokeServer(unpack(args))
+        end)
+    end
+
+
+function redeemRewards()
+    spawn(        
+    function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.0627899, 80.7778854, -539.961121, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+        wait(0.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5.27641296, 80.7778854, -523.963074, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+        wait(0.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-30.6796875, 81.6342697, -584.304871, 0.964976668, 0, 0.262335718, 0, 1, 0, -0.262335718, 0, 0.964976668)
+    print("Redeemed!")
+    end)
+end
+
+function equipBest()
+    spawn(
+        function()
+         remotePath.InventoryService.RF.EquipBest:InvokeServer()
+        end)
+    end
+
+function getCurrentPlayerPOS()
+    local plyr = game.Players.LocalPlayer
+    if plyr.Character then
+        return plyr.Charracter.HumanoidRootPart.Position
+    end
+end
+function teleportTO(placeCFrame)
+    local plyr = game.Players.LocalPlayer
+    if plyr.Character then
+plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+    end
+end
+
+function teleportWorld(Teleport)
+    if game:GetService("Workspace").Resources.Teleport:FindFirstChild(Teleport) then
+        teleportTO(game:GetService("Workspace").Resources.Teleport:FindFirstChild(Teleport).CFrame)
+
+
+        end
+    end
+
+
+    remotePath = game:GetService("ReplicatedStorage").Packages.Knit.Services
+
+
+function buyEgg(eggType)
+    spawn(
+        function()
+            while getgenv().AutoEgg == true do
+            remotePath.EggService.RF.PurchaseEgg:InvokeServer(eggType)
+            end
+        end)
+    end
+
+buyEgg('Basic')
